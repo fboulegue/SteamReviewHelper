@@ -41,7 +41,7 @@ This project provides a web-based dashboard to fetch, display, and filter Steam 
      ```php
      $appId = "Your_App_ID";
      ```
-$app_id = 'Your_New_App_ID';
+*Will be improved in the future*
 
 2. **Ensure Review Fetching Works:**
    - Make sure your Steam App ID allows review fetching via API.
