@@ -2,6 +2,9 @@
 
 This project provides a web-based dashboard to fetch, display, and filter Steam reviews for a specific game.
 
+![Screenshot](https://i.imgur.com/MGaPWls.png)
+
+
 ## Features
 
 - Fetch initial reviews (`Init Run` button)
