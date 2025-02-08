@@ -35,11 +35,12 @@ This project provides a web-based dashboard to fetch, display, and filter Steam 
      $gameName = "Your Game Name";
      $appId = "Your_App_ID";
      ```
-In fetch_reviews.php and updated-reviews.php: Replace the hardcoded App ID:
 
-php
-Kopieren
-Bearbeiten
+ - Open `fetch_reviews.php and updated-reviews.php`.
+   - Change:
+     ```php
+     $appId = "Your_App_ID";
+     ```
 $app_id = 'Your_New_App_ID';
 
 2. **Ensure Review Fetching Works:**
