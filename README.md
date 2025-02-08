@@ -36,7 +36,7 @@ This project provides a web-based dashboard to fetch, display, and filter Steam 
      $appId = "Your_App_ID";
      ```
 
- - Open `fetch_reviews.php and updated-reviews.php`.
+ - Open `fetch_reviews.php` and `updated-reviews.php`.
    - Change:
      ```php
      $appId = "Your_App_ID";
