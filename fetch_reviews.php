@@ -1,5 +1,5 @@
 <?php
-
+include('config.php');
 function fetchReviews($appId) {
     $reviews = [];
     $cursor = '*';
@@ -49,9 +49,6 @@ function saveReviewsToFile($reviews, $filename = 'reviews.json') {
 
     file_put_contents($filename, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 }
-
-// Game App ID for "Ambulance Life: A Paramedic Simulator"
-$appId = '1926520';
 
 // Fetch, deduplicate, and save reviews
 $reviews = fetchReviews($appId);
