@@ -1,7 +1,6 @@
 <?php
 $reviewsFileExists = file_exists('reviews.json');
-$gameName = "Ambulance Life: A Paramedic Simulator";
-$appId = "1926520";
+include('config.php');
 
 $updateInfo = '';
 if (file_exists('updated-reviews.json')) {
@@ -232,5 +231,45 @@ if (file_exists('updated-reviews.json')) {
       loadReviews('reviews.json');
     }
   </script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#init-run').on('click', function() {
+        $.ajax({
+            url: 'fetch_reviews.php',
+            method: 'POST',
+            success: function(response) {
+                console.log('Initial reviews fetched successfully!');
+                setTimeout(function() {
+                    window.location.reload();
+                }, 500); // Slight delay to ensure smooth reload
+            },
+            error: function(xhr, status, error) {
+                console.error('Error fetching initial reviews:', status, error);
+                alert('Failed to fetch initial reviews.');
+            }
+        });
+    });
+
+    $('#update-reviews').on('click', function() {
+        $.ajax({
+            url: 'updated-reviews.php',
+            method: 'POST',
+            success: function(response) {
+                console.log('Reviews updated successfully!');
+                setTimeout(function() {
+                    window.location.reload();
+                }, 500); // Slight delay to ensure smooth reload
+            },
+            error: function(xhr, status, error) {
+                console.error('Error updating reviews:', status, error);
+                alert('Failed to update reviews.');
+            }
+        });
+    });
+});
+</script>
+
 </body>
 </html>
