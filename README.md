@@ -29,26 +29,16 @@ This project provides a web-based dashboard to fetch, display, and filter Steam 
 ## Adjusting for a Different Game
 
 1. **Update the Game Name and App ID:**
-   - Open `index.php`.
+   - Open `config.php`.
    - Change:
      ```php
      $gameName = "Your Game Name";
      $appId = "Your_App_ID";
      ```
 
- - Open `fetch_reviews.php` and `updated-reviews.php`.
-   - Change:
-     ```php
-     $appId = "Your_App_ID";
-     ```
-*Will be improved in the future*
 
 2. **Ensure Review Fetching Works:**
    - Make sure your Steam App ID allows review fetching via API.
-
-## Expected Upgrades soon
-
-create config.php and include it to all files to dynamic read the $app_id from single file
 
 
 ## Known Issues
