@@ -1,4 +1,5 @@
 <?php
+include('config.php');
 function loadLastExecutionDate($filename = 'reviews.json') {
     if (file_exists($filename)) {
         $data = json_decode(file_get_contents($filename), true);
@@ -84,7 +85,6 @@ function updateReviewsFiles($newReviews, $reviewsFilename = 'reviews.json', $upd
     echo "Fetched and saved " . count($newReviews) . " new reviews to {$updatedFilename}. Total reviews: " . count($uniqueReviews) . " in {$reviewsFilename}.<br>";
 }
 
-$appId = '1926520';
 $lastExecutionDate = loadLastExecutionDate();
 
 if ($lastExecutionDate === 0) {
